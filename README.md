@@ -36,5 +36,5 @@
     ```
     додати:
     ```php
-      $this->keepincrm->createTask($feedback_id)
+      $this->keepincrm->createTask($feedback_id);
     ```
