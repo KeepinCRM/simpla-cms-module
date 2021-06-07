@@ -79,6 +79,25 @@ class KeepinCrm extends Simpla {
     $this->sendApiRequest("agreements", $params);
   }
 
+  public function createTask($feedback_id) {
+    if (!($feedback = $this->feedbacks->get_feedback(intval($feedback_id)))) {
+      return false;
+    }
+
+    $params = array (
+      'title'                 => "Звортній зв'язок #" . $feedback_id,
+      'comment'               => $feedback->message,
+      'client_attributes'     => array (
+        'person'              => $feedback->name,
+        'lead'                => true,
+        'source_id'           => $this->source_id,
+        'email'               => $feedback->email
+      )
+    );
+
+    $this->sendApiRequest("tasks", $params);
+  }
+
   private function sendApiRequest($method, $params) {
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_URL, 'https://api.keepincrm.com/v1/' . $method);
