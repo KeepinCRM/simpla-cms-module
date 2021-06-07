@@ -85,7 +85,7 @@ class KeepinCrm extends Simpla {
     }
 
     $params = array (
-      'title'                 => "Звортній зв'язок #" . $feedback_id,
+      'title'                 => "Зворотний зв'язок #" . $feedback_id,
       'comment'               => $feedback->message,
       'client_attributes'     => array (
         'person'              => $feedback->name,

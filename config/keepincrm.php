@@ -1,6 +1,6 @@
 <?php
 /**
- * KeepinCRM configurations
+ * KeepinCRM configuration
  */
 return array(
   'api_key'       => 'KeepinCRM-ApiKEy',
