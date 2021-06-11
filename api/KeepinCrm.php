@@ -48,7 +48,7 @@ class KeepinCrm extends Simpla {
       }
     };
 
-    $comment  = $order->comment;
+    $comment = $order->comment;
 
     if (isset($order->delivery_id)) {
       $delivery = $this->delivery->get_delivery(intval($order->delivery_id));
