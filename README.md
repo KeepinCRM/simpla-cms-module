@@ -9,6 +9,8 @@
 4. У файлі config/keepincrm.php заповнити api-ключ (api_key) та джерело (source_id), до якого будуть прикріплюватись замовлення та клієнти
 5. У файлі api/Simpla.php в кінці масиву $classes після 'managers' => 'Managers'
     ```php
+      #api/Simpla.php
+      
       private $classes = array(
                   ...
         'comments'   => 'Comments',
@@ -23,6 +25,8 @@
     ```
 6. Для відправлення замовлень в KeepinCRM. У файлі view/CartView.php після рядків
     ```php
+      #view/CartView.php
+      
       $this->notify->email_order_user($order->id);
       $this->notify->email_order_admin($order->id);
     ```
@@ -32,6 +36,8 @@
     ```
 7. Для відправлення зворотного зв'язку в KeepinCRM. У файлі view/FeedbackView.php після рядка
     ```php
+      #view/FeedbackView.php
+      
       $this->notify->email_feedback_admin($feedback_id);
     ```
     додати:
