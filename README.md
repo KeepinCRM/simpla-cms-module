@@ -1,10 +1,10 @@
 # Інтеграція KeepinCRM з Simpla CMS #
-* Миттєве відправлення даних з SimplaCMS в KeepinCRM при створенні замовлення
-* Після зворотного зв'язку на сайті в KeepinCRM створюється задача та лід
+* Миттєве відправлення даних з SimplaCMS в [KeepinCRM](https://bit.ly/3KCbyDR) при створенні замовлення
+* Після зворотного зв'язку на сайті в [KeepinCRM](https://bit.ly/3KCbyDR) створюється задача та лід
 
 ## Встановлення ##
 1. Встановити Simpla CMS (перевірено на версіях 2.2.4 та 2.3.8)
-2. Зареєструватись в KeepinCRM та запросити api-ключ в служби підтримки
+2. Зареєструватись в [KeepinCRM](https://bit.ly/3KCbyDR) та запросити api-ключ в служби підтримки
 3. Скопіювати всі файли з api та config собі на сайт
 4. У файлі config/keepincrm.php заповнити api-ключ (api_key) та джерело (source_id), до якого будуть прикріплюватись замовлення та клієнти
 5. У файлі api/Simpla.php в кінці масиву $classes після 'managers' => 'Managers'
@@ -22,7 +22,7 @@
     ```php
       'keepincrm'  => 'KeepinCrm'
     ```
-6. Для відправлення замовлень в KeepinCRM. У файлі view/CartView.php після рядків
+6. Для відправлення замовлень в [KeepinCRM](https://bit.ly/3KCbyDR). У файлі view/CartView.php після рядків
     ```php
       # view/CartView.php
       $this->notify->email_order_user($order->id);
